@@ -1,0 +1,801 @@
+/*SECCIÓN DE COMANDOS PRINCIPALES*/
+* {margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif; /*Fijamos como fuente principal la del Google Font*/
+    box-sizing: border-box; /*el relleno y el borde total esten incluidos todo dentro de la caja*/
+ }
+/*DEFINICIÓN DE LA FUENTE*/
+@font-face{font-family:"mi_fuente";
+    src: url(../fuente/Courgette-Regular.ttf) format('truetype');
+}
+/*CARACTERÍSTICAS DEL BODY*/
+body {background-color: rgb(226, 226, 226);
+}
+/*EMPEZAMOS DANDO CARACTERÍSTICAS "MOVIL FIRST"*/
+/*SECCIÓN DEL HEADER: LOGO Y ENLACES TIPO LINKS*/
+#encabezado {position: relative;
+    position: fixed;
+    top: 0; /*Las propiedades superior, derecha, inferior e izquierda se utilizan para colocar el elemento.*/
+    background-color:  rgb(226, 226, 226);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    clear: both; /*Hace limpieza, respetando solo los elementos flotantes*/
+    display: table; /*Propiedad que respeta el area creada por las cajjas flotantes*/
+}
+#encabezado .logo{width: 100%;
+    font-family: "mi_fuente";
+    font-size: 2.25rem;
+    text-shadow: 0px 4px 5px rgb(113, 86, 145);
+    text-align: center;
+    padding: 1%;
+}
+#encabezado .link {width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+}
+#encabezado .link .link1 {background-color: rgba(55, 44, 69, 0.85);                             
+    border-color: rgba(55, 44, 69, 0.85);
+    box-shadow: 0px 7px 10px rgba(113, 86, 145,0.90);
+    color: white;
+    width: 22%;
+    height: 20%;
+    border-radius: 1vw;
+    text-align: center;
+    transition: all 600ms ease-out;
+    cursor: pointer;
+}
+#encabezado .link .link1:hover {color: blueviolet;
+           transform: scale(1.1);
+}
+/*SECCIÓN TITULO PRINCIPAL*/
+.titulo1 h1{width: 100%;
+    margin-top: 20%;
+    text-shadow: 0px 4px 5px rgb(113, 86, 145);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1%;
+    cursor: pointer;
+    transition: all 600ms ease-out;
+    text-decoration: underline;
+}
+.titulo1:hover h1{color: blueviolet;
+          transform: scale(1.2);
+}
+/*SECCIÓN NAVEGADOR CON BOTÓN*/
+.navegador {width:98%;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around; /*permite alinear las filas: igual// espaciadas*/
+    justify-content: space-around;
+}
+.navegador .paginas {width: 100%;
+            padding: 1%;
+            display: flex;
+            flex-wrap: wrap; /*para ajustar los elemento dentro del contenedor*/
+            align-content: center;
+            align-items: center;
+            justify-content: space-around;
+}
+.navegador .paginas a{width: 48%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              align-content: space-around;
+              transition: all 600ms ease-out;
+}
+.navegador .paginas a .icono {width: 50%;
+                  height: auto;
+                  transition: all 600ms ease-out;
+                  cursor: pointer;
+}
+
+.navegador .paginas .icono:hover {transform: scale(1.1);
+}
+
+.navegador .boton {width: 30%;
+           height: 10%;
+           margin-top: 2%;
+           font-weight: bold;
+           background-color: #4b3465;
+           border-radius: 5px;
+           color: #E7E7E7;
+           font-size: 1.25rem;
+           box-shadow: 2px 5px 7px black;
+           cursor: pointer;
+           transition: all 600ms ease-out;
+}
+.navegador .boton:hover {transform: scale(1.1);
+}
+.navegador .boton a:visited {color:#E7E7E7;
+                  background-color: #4b0377;
+                  font-size: 1.25rem;
+                  font-weight: bold;
+}
+.navegador .boton a:link{color: #E7E7E7;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.navegador .boton a:visited {color:#E7E7E7;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.navegador .boton a:active{color: #E7E7E7;
+    font-size: 1rem;
+    font-weight: bold;
+}
+/*SECCIÓN PRINCIPAL: IMAGEN, TITULO SECUNDARIO Y TEXTO*/
+.titulo2 {width: 50%;
+    font-weight: bold;
+    font-size: x-large;
+    text-shadow: 2px 4px 5px rgb(113, 86, 145);
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+    transition: all 600ms ease-in-out;
+    cursor: pointer;
+}
+.titulo2:hover {transform: scale(1.2);
+                color: blueviolet;
+}
+.imagen {width: 100%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen figure {position: relative;
+            width: 95%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0px 7px 10px rgba(113, 86, 145,0.90);
+            cursor: pointer;}
+
+.imagen figure img {width: 100%;
+                height: 100%;
+                transition: all 500ms ease-out;
+}
+
+.imagen figure .capa {position: absolute;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: rgba(113, 86, 145, 0.7);
+                  transition: all 600ms ease-out;
+                  opacity: 0;
+                  visibility: hidden;
+                  text-align: center;
+}
+.imagen figure .capa h3{color: #fff;
+    font-family: Quicksand;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0px 6px 5px rgb(0,0,0);
+    margin-bottom: 70%;
+    transition: all 600ms ease-out;
+    margin-top: 1vw;
+}
+.imagen figure .capa p{color: #fff;
+                        font-family: Quicksand;
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        text-shadow: 0px 6px 5px rgb(0,0,0);
+                        line-height: 1.5;
+                        width: 100%;
+                        max-width: 220px;
+                        margin: auto;
+}
+.imagen figure:hover > .capa {opacity: 1;
+                              visibility: visible;
+}
+.imagen figure:hover > .capa h3{margin-top: 30%;
+                                margin-bottom: 5%;
+}
+.imagen figure:hover > img{transform: scale(1.2)
+}
+.imagen .parrafo {width: 96%;
+                  text-indent: 1em;
+                  font-size: 1.25rem;
+                  margin: 2%;
+                  margin-top: 5%;
+                  padding: 2%;
+                  text-align: justify;
+                  }
+.imagen .parrafo h2 {display: none;}
+.imagen .parrafo2 {display: none;
+}
+.publicidad {position: relative;
+    width: 95%;
+    margin: 2.5%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 7px 10px rgba(113, 86, 145,0.90);
+    cursor: pointer;}
+
+.publicidad img {width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.publicidad .capa1 {position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(113, 86, 145, 0.6);
+    transition: all 600ms ease-out;
+    opacity: 0 ;
+    visibility: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.publicidad .capa1 h3{color: #fff;
+    font-family: Quicksand;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0px 6px 5px rgb(0,0,0);
+    
+    transition: all 600ms ease-out;
+   
+}
+.publicidad .capa1 p{color: #fff;
+                    font-family: Quicksand;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    text-shadow: 0px 6px 5px rgb(0,0,0);
+                    line-height: 1.5;
+                    width: 100%;
+                    max-width: 220px;
+                   
+}
+.publicidad:hover > .capa1 {opacity: 1;
+                visibility: visible;
+                transform: scale(1.3);
+}
+
+.publicidad:hover > img{transform: scale(1.2)
+}
+.texto2 {width: 96%;
+    text-indent: 1em;
+    font-size: 1.25rem;
+    margin: 2%;
+    padding: 2%;
+    text-align: justify;
+}
+/*SECCIÓN VIDEO Y TEXTO (LISTA TIPO ul)*/
+.contenedor {width: 98%;
+    height: auto;
+    margin: 2% 1%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*background-color: coral;*/
+}
+.contenedor .video {width: 86%;
+    height: 50vh;
+    margin-bottom: 2%;
+}
+.contenedor .caja-texto {width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4b3465;
+    padding: 1% 2%;
+    list-style-position: inside;
+    border-radius: 5%;
+    box-shadow: 10px 10px 10px rgba(75, 51, 170, 0.613);
+}
+.contenedor .caja-texto .titulo-lista {color: #E7E7E7;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5%;
+    text-shadow: 2px 5px 5px rgba(255, 255, 255, 0.389);
+}
+.contenedor .caja-texto .lista {color: #E7E7E7;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+.contenedor .caja-texto .lista li{padding: 1% 0%;}
+
+/*SECCIÓN PARRAFO (LISTA TIPO ol)*/
+.texto4 {width: 96%;
+    height: auto;
+    margin: 5% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4b3465;
+    padding: 1% 2.5%;
+    border-radius: 5%;
+    box-shadow: 10px 10px 10px rgba(75, 51, 170, 0.613);
+}
+.texto4 .titulo-lista {color: #E7E7E7;
+    font-size: 1.7rem;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    margin-bottom: 5%;
+    text-shadow: 2px 5px 5px rgba(255, 255, 255, 0.389);
+}
+.texto4 .lista2 {color: #E7E7E7;
+    font-size: 1.15rem;
+    list-style-position: inside;
+    line-height: 1.7rem;
+}
+/*SECCIÓN MAPA E IMAGENES SOLO PARA CELULAR*/
+.mapa {width: 92%;
+    height: 60vh;
+    margin: 4% 4%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 10px 10px rgba(75, 51, 170, 0.613);
+}
+.mapa iframe {width: 100%;
+    height: 100%;
+}
+/*SECCIÓN DE REDES SOCIALES*/
+.redes {width: 96%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    
+}
+.redes img {width: 70%;
+    transition: all 600ms ease-in-out;
+    cursor: pointer;
+}
+.redes li:hover {transform:scale(1.2);
+}
+/*SECCIÓN WHATSAPP*/
+.wsp {position:fixed;
+    z-index: 999;
+    border-radius: 50%;
+    bottom: 3%;
+    right: 2%;
+}
+.wsp .icono3{width: 75%;
+}
+.wsp .icono3:hover {transform: scale(1.2);
+}
+/*SECCIÓN DEL FOOTER*/
+.final {width: 100%;
+    height: auto;
+    margin-top: 3%;
+    padding: 2% 0% 1% 0%;
+    bottom:0px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #E7E7E7;
+}
+.final .contactos {display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.final .contactos .tit {font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 5%;
+}
+.autor {color: aquamarine;}
+
+/*CARACTERÍSTICAS DEL FROMULARIO*/
+form {width: 90%;
+    height: auto;
+    margin: 20% 5%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background-color: coral;*/
+}
+form .etiquetas {color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgba(55, 44, 69, 0.85);                             
+    border-color: rgba(55, 44, 69, 0.85);
+    width: 100%;
+    height: 15vh;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+input {width: 60%;  
+}
+.mensaje {color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgba(55, 44, 69, 0.85);                             
+    border-color: rgba(55, 44, 69, 0.85);
+    width: 80%;
+    height: auto;
+    padding: 1% 0%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+textarea {width: 95%;
+    margin-top: 5%;
+}
+button {background-color: #4b3465;
+    width: 20%;
+    height: 5vh;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    color: #E7E7E7;
+    font-size: 1.25rem;
+    box-shadow: 2px 5px 7px black;
+    cursor: pointer;
+    transition: all 600ms ease-out;   
+}
+button:hover {transform: scale(1.2);
+}
+button a:visited {color:#E7E7E7;
+    background-color: #4b0377;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+button a:link{color: #E7E7E7;
+font-size: 1.25rem;
+font-weight: bold;
+}
+button a:visited {color:#E7E7E7;
+font-size: 1.25rem;
+font-weight: bold;
+}
+button a:active{color: #E7E7E7;
+font-size: 1rem;
+font-weight: bold;
+}
+/*----------------------------------------------------------------*/
+
+/*CARACTERÍSITCAS DE LOS MEDIA QUIARIES*/
+/*PANTALLAS DE CELULAR VERTICAL (<575px)*/
+@media (max-width: 575px) {
+    
+}
+/*PANTALLAS DE CELULAR HORIZONTAL (576-767px)*/
+@media (min-width: 575px) and (max-width:767px) {
+    .titulo1 h1{margin-top: 17%;}
+    .imagen figure {width: 80%;
+        height: auto;
+    }
+    
+}
+/*PANTALLAS DE TABLETS (768-991px)*/
+@media (min-width: 768px) and (max-width:991px) {
+    #encabezado {display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #encabezado .logo{width: 25%;
+        }
+    #encabezado .link {width: 75%;
+    }
+    .titulo1 h1 {font-size: 2.75rem;
+    }
+    .navegador {display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: space-around; /*permite alinear las filas: igual// espaciadas*/
+        justify-content: space-between;
+    }
+    .navegador .paginas {width: 80%;
+        padding: 0%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .navegador .paginas a{width: 24%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: space-around;
+        transition: all 500ms ease-out;
+    }
+    .navegador .paginas a .icono {width: 65%;}
+    .navegador .boton {width: 18%;
+            height: 10%;
+            margin-top: 0%;
+    }
+    .titulo1 h1{margin-top: 12%;}
+    .titulo2 {display: none;
+    }
+    .imagen {width: 98%;
+        margin: 1%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .imagen .parrafo h2 {display: block;
+                        font-weight: bold;
+                        font-size: xx-large;
+                        margin-bottom: 2%;
+                        text-shadow: 2px 4px 5px rgb(113, 86, 145);
+                        text-align: center;
+                        transition: all 600ms ease-in-out;
+                        cursor: pointer;
+    }
+    .imagen .parrafo h2:hover {transform: scale(1.2);
+        color: blueviolet;
+    }
+    .publicidad {display: none;}
+    
+    .contenedor {display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        /*background-color: coral;*/
+    }
+    .contenedor .video {width: 60%;
+        height: 60vh;
+        margin-bottom: 2%;
+    }
+    .texto4 {margin: 1% 2%;
+        border-radius: 3%;
+    }
+    .final .contactos {margin-bottom: 2%;
+    }
+    .final .contactos .tit {margin-bottom: 2%;
+    }
+    form {margin: 15% 5%;
+    }
+    form .etiquetas {display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    input {width: 70%;  
+    }
+}
+/*PANTALLAS DE ESCRITORIO (992-1199px)*/
+@media (min-width: 992px) and (max-width:1199px) {
+    #encabezado {display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #encabezado .logo{width: 25%;
+        font-size:2.5rem;
+        }
+    #encabezado .link {width: 75%;
+        font-size: 1.25rem;
+    }
+    .titulo1 h1 {font-size: 2.85rem;
+    }
+    .navegador {display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: space-around; /*permite alinear las filas: igual// espaciadas*/
+        justify-content: space-between;
+    }
+    .navegador .paginas {width: 80%;
+        padding: 0%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .navegador .paginas a{width: 24%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: space-around;
+        transition: all 500ms ease-out;
+    }
+    .navegador .paginas a .icono {width: 65%;}
+    .navegador .boton {width: 18%;
+            height: 10%;
+            margin-top: 0%;
+    }
+    .titulo1 h1{margin-top: 12%;}
+    .titulo2 {display: none;
+    }
+    .imagen {width: 98%;
+        margin: 1%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .imagen .parrafo h2 {display: block;
+        font-weight: bold;
+        font-size: xx-large;
+        margin-bottom: 2%;
+        text-shadow: 2px 4px 5px rgb(113, 86, 145);
+        text-align: center;
+        transition: all 600ms ease-in-out;
+        cursor: pointer;
+    }
+    .imagen .parrafo h2:hover {transform: scale(1.2);
+        color: blueviolet;
+    }
+    .imagen .parrafo .parrafo2 {display: block;
+    }
+    
+    .texto2 {display: none;}
+    .publicidad {display: none;}
+    .contenedor {display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        /*background-color: coral;*/
+    }
+    .contenedor .video {width: 70%;
+        height: 65vh;
+        margin-bottom: 2%;
+    }
+    .texto4 {width: 92%;
+        margin: 1% 4%;
+        border-radius: 3%;
+    }
+    .redes img {width: 80%;}
+    .final .contactos {margin-bottom: 2%;
+    }
+    .final .contactos .tit {margin-bottom: 2%;
+    }
+    form {width: 80;
+        margin: 15% 5%;
+    }
+    form .etiquetas {display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    input {width: 70%;  
+    }
+}
+/*PANTALLAS DE EXTRA-GRANDES (TV) (>1200px)*/
+@media (min-width: 1200px) {
+    #encabezado {display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #encabezado .logo{width: 25%;
+        font-size:2.5rem;
+        }
+    #encabezado .link {width: 75%;
+        font-size: 1.25rem;
+    }
+    .titulo1 h1 {font-size: 2.85rem;
+    }
+    .navegador {display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: space-around; /*permite alinear las filas: igual// espaciadas*/
+        justify-content: space-between;
+    }
+    .navegador .paginas {width: 80%;
+        padding: 0%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .navegador .paginas a{width: 24%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: space-around;
+        transition: all 500ms ease-out;
+    }
+    .navegador .paginas a .icono {width: 65%;}
+    .navegador .boton {width: 18%;
+            height: 10%;
+            margin-top: 0%;
+    }
+    .titulo1 h1{margin-top: 12%;}
+    .titulo2 {display: none;
+    }
+    .imagen {width: 98%;
+        margin: 1%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .imagen .parrafo h2 {display: block;
+        font-weight: bold;
+        font-size:3rem;
+        margin-bottom: 2%;
+        text-shadow: 2px 4px 5px rgb(113, 86, 145);
+        text-align: center;
+        transition: all 600ms ease-in-out;
+        cursor: pointer;
+    }
+    .imagen .parrafo h2:hover {transform: scale(1.2);
+        color: blueviolet;
+    }
+    .imagen .parrafo .parrafo2 {display: block;
+    }
+    
+    .texto2 {display: none;}
+    .publicidad {display: none;}
+    .contenedor {display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        /*background-color: coral;*/
+    }
+    .contenedor .video {width: 70%;
+        height: 65vh;
+        margin-bottom: 2%;
+    }
+    .texto4 {width: 92%;
+        margin: 1% 4%;
+        border-radius: 3%;
+    }
+    .redes img {width: 85%;}
+    .final .contactos {margin-bottom: 2%;
+    }
+    .final .contactos .tit {margin-bottom: 2%;
+    }
+    form {width: 70;
+        margin: 15% 5%;
+    }
+    form .etiquetas {display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    input {width: 85%;  
+    }
+}
